@@ -9,7 +9,7 @@ const App: React.FC = () => {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
-        <StatusBar barStyle={'light-content'} backgroundColor="#8B10AE" />
+        <StatusBar barStyle={'light-content'} backgroundColor="#8605B8" />
         <Routes />
       </PersistGate>
     </Provider>

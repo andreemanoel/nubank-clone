@@ -6,18 +6,6 @@ const styles = StyleSheet.create({
     maxHeight: 400,
     zIndex: 5,
   },
-
-  card: {
-    flex: 1,
-    backgroundColor: '#fff',
-    borderRadius: 4,
-    marginHorizontal: 20,
-    height: '100%',
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 380,
-  },
 });
 
 export default styles;
