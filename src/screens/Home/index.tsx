@@ -1,13 +1,18 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import Content from '../../components/molecules/Content';
+import Header from '../../components/molecules/Header';
+import Tabs from '../../components/molecules/Tabs';
+import Container from '../../components/organisms/Container';
 
 // import { Container } from './styles';
 
 const Home: React.FC = () => {
   return (
-    <View>
-      <Text>Home</Text>
-    </View>
+    <Container>
+      <Header />
+      <Content />
+      <Tabs />
+    </Container>
   );
 };
 

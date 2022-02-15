@@ -12,7 +12,7 @@ const persistedReducer = persistReducer(
   {
     key: 'root',
     storage: AsyncStorage,
-    whitelist: ['clients'],
+    whitelist: [],
   },
   reducers,
 );
