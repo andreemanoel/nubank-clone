@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import styles from './styles';
 
@@ -9,10 +9,10 @@ export type TabItemProps = {
 };
 const TabItem: React.FC<TabItemProps> = ({icon, title}) => {
   return (
-    <View style={styles.tabItem}>
+    <TouchableOpacity style={styles.tabItem}>
       <Icon name={icon} size={24} color="#fff" />
       <Text style={styles.tabText}>{title}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 

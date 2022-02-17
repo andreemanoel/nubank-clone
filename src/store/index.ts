@@ -3,9 +3,11 @@ import {combineReducers} from 'redux';
 import {persistStore, persistReducer} from 'redux-persist';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import clients from './slices/client.slice';
+import form from './slices/form.slice';
 
 const reducers = combineReducers({
   clients,
+  form,
 });
 
 const persistedReducer = persistReducer(

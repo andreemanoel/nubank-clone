@@ -7,6 +7,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 30,
   },
+
+  buttonContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+
+  text: {
+    fontSize: 18,
+  },
 });
 
 export default styles;

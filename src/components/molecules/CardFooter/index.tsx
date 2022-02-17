@@ -8,7 +8,7 @@ const CardFooter: React.FC = () => {
   return (
     <View style={styles.footer}>
       <Text style={styles.annotation}>
-        Transferência de R$20,00 recebido de Neymar JR hoje às 18:00h
+        Transferência de R$20,00 recebido de Maria Eloiza hoje às 16:47h
       </Text>
     </View>
   );

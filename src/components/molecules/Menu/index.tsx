@@ -9,7 +9,10 @@ const Menu: React.FC = () => {
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       <View style={styles.code}>
-        <QRCode value="https://rocketseat.com.br" color="#8605B8" />
+        <QRCode
+          value="https://api.whatsapp.com/send?phone=5543998196642"
+          color="#8D00DA"
+        />
       </View>
 
       <View style={styles.nav}>
