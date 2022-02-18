@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
 
   text: {
     fontSize: 18,
+    marginLeft: 5,
   },
 });
 

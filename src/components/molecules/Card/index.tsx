@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   PanGestureHandler,
   PanGestureHandlerGestureEvent,
@@ -21,6 +21,8 @@ type ContextType = {
 };
 
 const Card: React.FC = () => {
+  const [visibly, setVisibly] = useState(true);
+
   const translateY = useSharedValue(0);
   // const startY = useSharedValue(translateY);
 
@@ -32,7 +34,6 @@ const Card: React.FC = () => {
       context.startY = translateY.value;
     },
     onActive: (event, contexto) => {
-      console.log(event.translationY, translateY.value);
       if (event.translationY + translateY.value < -30) {
         return (translateY.value = withSpring(0));
       }
@@ -62,8 +63,8 @@ const Card: React.FC = () => {
   return (
     <PanGestureHandler onGestureEvent={animatedEvent}>
       <Animated.View style={[styles.card, rstyle]}>
-        <CardHeader />
-        <CardContent />
+        <CardHeader visibly={visibly} setVisibly={setVisibly} />
+        <CardContent visibly={visibly} />
         <CardFooter />
       </Animated.View>
     </PanGestureHandler>

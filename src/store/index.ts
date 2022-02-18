@@ -4,10 +4,12 @@ import {persistStore, persistReducer} from 'redux-persist';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import clients from './slices/client.slice';
 import form from './slices/form.slice';
+import notifications from './slices/notification.slice';
 
 const reducers = combineReducers({
   clients,
   form,
+  notifications,
 });
 
 const persistedReducer = persistReducer(

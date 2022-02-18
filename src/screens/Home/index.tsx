@@ -4,7 +4,6 @@ import Content from '../../components/molecules/Content';
 import Header from '../../components/molecules/Header';
 import Tabs from '../../components/molecules/Tabs';
 import Container from '../../components/organisms/Container';
-
 //f38895e3-1238-4b87-a00d-a0e35782135c
 
 const Home: React.FC = () => {
@@ -26,6 +25,7 @@ const Home: React.FC = () => {
       },
     );
     OneSignal.setNotificationOpenedHandler(onOpened);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onOpened = (result: OpenedEvent) => {

@@ -17,6 +17,12 @@ const styles = StyleSheet.create({
     marginTop: 3,
     color: '#333',
   },
+
+  box: {
+    width: '100%',
+    height: 55,
+    backgroundColor: '#F4F4F4',
+  },
 });
 
 export default styles;
