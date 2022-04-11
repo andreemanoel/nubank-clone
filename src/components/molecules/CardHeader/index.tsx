@@ -17,7 +17,7 @@ const CardHeader: React.FC<CardHeaderProps> = ({visibly, setVisibly}) => {
         <Text style={styles.text}>NuConta</Text>
       </View>
       <TouchableOpacity onPress={() => setVisibly(!visibly)}>
-        {!visibly ? (
+        {visibly ? (
           <IconM name="visibility" size={28} color="#666" />
         ) : (
           <IconM name="visibility-off" size={28} color="#666" />

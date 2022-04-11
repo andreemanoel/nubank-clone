@@ -1,11 +1,15 @@
 import React from 'react';
+import {StackActions, useNavigation} from '@react-navigation/native';
 import {ScrollView, Text, TouchableOpacity, View} from 'react-native';
 import QRCode from 'react-native-qrcode-svg';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import {FormRoute} from '../../../services/routes';
 
 import styles from './styles';
 
 const Menu: React.FC = () => {
+  const navigation = useNavigation();
+
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       <View style={styles.code}>
@@ -36,7 +40,9 @@ const Menu: React.FC = () => {
 
       <TouchableOpacity
         onPress={() => {
-          console.log('saiu');
+          navigation.dispatch({
+            ...StackActions.replace(FormRoute.name),
+          });
         }}
         style={styles.signOutButton}>
         <Text style={styles.signOutButtonText}>SAIR DO APP</Text>

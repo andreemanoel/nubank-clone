@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import {Image, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import Container from '../../components/organisms/Container';
 import {HomeRoute} from '../../services/routes';
-import {useAppDispatch, useAppSelector} from '../../store/hooks';
+import {useAppDispatch} from '../../store/hooks';
 import {setClient} from '../../store/slices/form.slice';
 import styles from './styles';
 
@@ -12,8 +12,6 @@ import styles from './styles';
 const Form: React.FC = () => {
   const [nome, setNome] = useState('');
   const [valor, setValor] = useState('');
-
-  const {client} = useAppSelector(state => state.form);
 
   const dispatch = useAppDispatch();
   const navigation = useNavigation();
@@ -37,14 +35,14 @@ const Form: React.FC = () => {
         <TextInput
           placeholder="Nome"
           onChangeText={val => setNome(val)}
-          value={client.client_nome}
+          value={nome}
           placeholderTextColor="#fff"
           style={styles.input}
         />
         <TextInput
           placeholder="Saldo"
           onChangeText={val => setValor(val)}
-          value={client.client_valor}
+          value={valor}
           placeholderTextColor="#fff"
           style={styles.input}
         />
